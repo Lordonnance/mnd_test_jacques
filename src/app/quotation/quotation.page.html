@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>quotation</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Texte de la citation</ion-label>
+    <ion-input type="text" [(ngModel)]="text"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Auteur de la citation</ion-label>
+    <ion-input type="text" [(ngModel)]="author"></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-button *ngIf="navParams.get('isNew')" expand="block" color="tertiary" (click)="addNewQuote()">
+    AJOUTER
+  </ion-button>
+
+  <ion-button *ngIf="!navParams.get('isNew')" expand="block" color="tertiary" (click)="editQuote()">
+    MODIFIER
+  </ion-button>
+</ion-footer>

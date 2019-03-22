@@ -19,8 +19,12 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      // Cordova Status bar styling
+      this.statusBar.styleLightContent();
+      this.statusBar.overlaysWebView(false);
+      this.statusBar.backgroundColorByHexString('#633ce0');
     });
   }
 }
