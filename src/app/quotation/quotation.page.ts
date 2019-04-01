@@ -14,7 +14,7 @@ export class QuotationPage {
   constructor(
     private modalCtrl: ModalController,
     public quotationService: QuotationService,
-    private navParams: NavParams
+    public navParams: NavParams
   ) {
     if (!navParams.get("isNew")) {
       this.text = navParams.get("text")

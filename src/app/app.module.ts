@@ -11,12 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { QuotationService } from './services/quotation.service';
-import { QuotationPage } from './quotation/quotation.page';
+import { QuotationPageModule } from './quotation/quotation.module';
 
 @NgModule({
-  declarations: [AppComponent, QuotationPage],
-  entryComponents: [QuotationPage],
-  imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent],
+  entryComponents: [],
+  imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule, QuotationPageModule],
   providers: [
     StatusBar,
     SplashScreen,
